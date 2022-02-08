@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get '/hello', to: 'application#hello_world'
+  namespace :api do
+
+    resources :recipes, only: [:index, :show, :create, :update, :destroy]
+
+
+  end
 
   get '*path',
   to: 'fallback#index',

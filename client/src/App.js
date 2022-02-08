@@ -1,25 +1,45 @@
 import './App.css';
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+import Home from "./components/Home";
+import Header from "./components/Header";
+import Recipes from "./components/RecipesPage";
+import Courses from "./components/Courses";
+import About from "./components/About";
+import Form from "./components/Form";
+
 function App() {
-  const [count, setCount] = useState(0);
+  const [recipes, setRecipesList] = useState([])
+
 
   useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+    fetch('/api/recipes')
+    .then(res => res.json())
+    .then((data) => setRecipesList(data))
+  }, [])
 
   return (
     <BrowserRouter>
       <div className="App">
+        <Header />
         <Switch>
-          <Route path="/testing">
-            <h1>Test Route</h1>
+          <Route exact path="/">
+            <Home />
           </Route>
-          <Route path="/">
-            <h1>Page Count: {count}</h1>
+          <Route exact path="/recipes">
+            <Recipes 
+              recipes={recipes}
+            />
+          </Route>
+          <Route exact path="/courses">
+            <Courses />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/form">
+            <Form />
           </Route>
         </Switch>
       </div>
