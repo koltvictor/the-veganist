@@ -4,10 +4,10 @@ class Api::RecipesController < ApplicationController
         render json: Recipe.all, status: 200
     end
 
-    # def show
-    #     @Recipe = Recipe.find(params[:id])
-    #     render json: @Recipe, status: 200
-    # end
+    def show
+        @recipe = Recipe.find(params[:id])
+        render json: @recipe, status: 200
+    end
 
     # def create 
     #     Recipe = Recipe.new(Recipe_params)
@@ -40,7 +40,7 @@ class Api::RecipesController < ApplicationController
 
     # private
 
-    # def Recipe_params
+    # def recipe_params
     #     params.permit(:id, :name, :image, :ingredients, :recipe, :cuisine, :course)
     # end
 

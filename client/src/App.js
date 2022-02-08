@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Recipes from "./components/RecipesPage";
+import RecipeDetail from "./components/RecipeDetail";
 import Courses from "./components/Courses";
 import About from "./components/About";
 import Form from "./components/Form";
@@ -31,6 +32,9 @@ function App() {
             <Recipes 
               recipes={recipes}
             />
+          </Route>
+          <Route exact path="/recipes/:id">
+            <RecipeDetail />
           </Route>
           <Route exact path="/courses">
             <Courses />
