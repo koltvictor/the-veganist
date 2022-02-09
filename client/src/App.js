@@ -25,8 +25,7 @@ function App() {
   }
 
   let displayedRecipes = recipes.filter(recipe => {
-    return recipe.name.toLowerCase().includes(search.toLowerCase()) ||
-    recipe.ingredients.toLowerCase().includes(search.toLowerCase()) 
+    return recipe.recipe.toLowerCase().includes(search.toLowerCase())
   })
 
   return (
