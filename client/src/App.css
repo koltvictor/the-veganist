@@ -80,7 +80,7 @@
 }
 
 .nav:hover {
-  background-color: rgba(12, 214, 29, 0.5);
+  text-shadow: 2px 2px 4px #000000;
 }
 
 form{

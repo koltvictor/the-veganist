@@ -9,11 +9,11 @@ import RecipeDetail from "./components/RecipeDetail";
 import Courses from "./components/Courses";
 import About from "./components/About";
 import Form from "./components/Form";
+import Search from "./components/Search";
 
 function App() {
   const [recipes, setRecipesList] = useState([])
-  const [searchRecipes, setSearchRecipes] = useState('')
-
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     fetch('/api/recipes')
@@ -21,8 +21,13 @@ function App() {
     .then((data) => setRecipesList(data))
   }, [])
 
-  const displayRecipes = recipes.filter(recipe => {
-    return recipe.name.toLowerCase().includes(searchRecipes.toLowerCase())
+  function handleSearch(e) {
+    setSearch(e.target.value)
+  }
+
+  let displayedRecipes = recipes.filter(recipe => {
+    return recipe.name.toLowerCase().includes(search.toLowerCase()) ||
+    recipe.ingredients.toLowerCase().includes(search.toLowerCase()) 
   })
 
   return (
@@ -31,11 +36,17 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home 
+              recipes={recipes}
+            />
           </Route>
           <Route exact path="/recipes">
+            <Search 
+              search={search}
+              handleSearch={handleSearch}
+            />
             <Recipes 
-              recipes={recipes}
+              recipes={displayedRecipes}
             />
           </Route>
           <Route exact path="/recipes/:id">

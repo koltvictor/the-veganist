@@ -12,7 +12,7 @@ Recipe.destroy_all
 
 puts "Seeding new data"
 
-Recipe.create(
+Recipe.create!(
     name: "Tacos",
     image: "https://i0.wp.com/www.worldofvegan.com/wp-content/uploads/2018/08/World-of-Vegan-Beefy-Vegan-Tacos-3.jpg?ssl=1",
     ingredients: "Beyond Meat or Impossible ground beef, shallot, garlic,vegetable stock, jalapenos, cilantro, pepperjack cheese, frozen or canned corn, avocado, red cabbage, lime, salt, olive oil, Siete Taco Seasoning (I use spicy), diced tomatoes, cashew yogurt, salsa verde of your choice",
