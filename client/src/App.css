@@ -54,7 +54,7 @@
   text-align: center;
   padding: 0;
   display: flex;
-  /* background-color: rgb(24, 207, 192); */
+  background-color: rgb(29, 131, 38);
 }
 
 .headerText {
@@ -73,4 +73,21 @@
   padding-inline-start: 40px;
   text-decoration: none;
   padding-top: 1rem;
+}
+
+.nav:visited {
+  color: white;
+}
+
+.nav:hover {
+  background-color: rgba(12, 214, 29, 0.5);
+}
+
+form{
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(12, 214, 29, 0.5);
+  padding: 4rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
 }

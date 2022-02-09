@@ -12,6 +12,7 @@ import Form from "./components/Form";
 
 function App() {
   const [recipes, setRecipesList] = useState([])
+  const [searchRecipes, setSearchRecipes] = useState('')
 
 
   useEffect(() => {
@@ -19,6 +20,10 @@ function App() {
     .then(res => res.json())
     .then((data) => setRecipesList(data))
   }, [])
+
+  const displayRecipes = recipes.filter(recipe => {
+    return recipe.name.toLowerCase().includes(searchRecipes.toLowerCase())
+  })
 
   return (
     <BrowserRouter>
