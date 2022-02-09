@@ -7,7 +7,6 @@ export default function Header () {
                 <a className="nav" href="/">Home</a>            
                 <a className="nav" href="/recipes">Recipes Index</a>
                 <a className="nav" href="/courses">Sort by Course</a>
-                <a className="nav" href="/about">About</a>
                 <a className="nav" href="/form">Add a New Recipe</a>
             </div>
         </div>

@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import Recipes from "./components/RecipesPage";
 import RecipeDetail from "./components/RecipeDetail";
 import Courses from "./components/Courses";
-import About from "./components/About";
 import Form from "./components/Form";
 import Search from "./components/Search";
 
@@ -41,6 +40,7 @@ function App() {
             />
           </Route>
           <Route exact path="/recipes">
+            <br/>
             <Search 
               search={search}
               handleSearch={handleSearch}
@@ -54,9 +54,6 @@ function App() {
           </Route>
           <Route exact path="/courses">
             <Courses />
-          </Route>
-          <Route exact path="/about">
-            <About />
           </Route>
           <Route exact path="/form">
             <Form
