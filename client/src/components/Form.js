@@ -76,8 +76,8 @@ export default function Form ({recipes, setRecipesList}) {
                     value={course}
                     onChange={(e) => setCourse(e.target.value)}
                     required
-                /><br/>
-                <button type="submit">Submit New Recipe!</button>
+                /><br/><br/>
+                <button className="submitButton" type="submit">Submit Recipe</button>
             </form>
         </div>
     )
