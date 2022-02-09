@@ -42,12 +42,23 @@
 }
 
 .recipeCard {
-  border: 2px solid black;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  display: inline-block;
+  margin-right: 1vh;
+  margin-left: 1vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .recipeImage {
-  height: 25%;
-  width: 25%;
+  height: 60%;
+  width: 60%;
+  border: 2px solid #000;
 }
 
 .headerWrapper {
