@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.recipeCards{
+  display: flex;
+}
+
+.recipeCard {
+  border: 2px solid black;
+}
+
+.recipeImage {
+  height: 25%;
+  width: 25%;
+}

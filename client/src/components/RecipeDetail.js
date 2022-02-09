@@ -23,8 +23,8 @@ export default function RecipeDetail () {
             <h3>{recipeShowing.name}</h3>
             <p>Ingredients:<br/>{recipeShowing.ingredients}</p>
             <p>Directions:<br/>{recipeShowing.recipe}</p>
-            <p>Cuisine: {recipeShowing.cuisine.toUpperCase()}</p>
-            <p>Course(s): {recipeShowing.course.toUpperCase()}</p>
+            <p>Cuisine: {recipeShowing.cuisine}</p>
+            <p>Course(s): {recipeShowing.course}</p>
             <a href="/recipes">Back to recipes</a><br/>
         </div>
     )

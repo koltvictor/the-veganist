@@ -14,7 +14,9 @@ export default function RecipesPage ({recipes}) {
     return(
         <div>
             <h1> RECIPES </h1>
-            {recipe}
+            <div className="recipeCards">
+                {recipe}
+            </div>
         </div>
     )
 }

@@ -43,7 +43,10 @@ function App() {
             <About />
           </Route>
           <Route exact path="/form">
-            <Form />
+            <Form
+              recipes={recipes}
+              setRecipesList={setRecipesList}
+            />
           </Route>
         </Switch>
       </div>

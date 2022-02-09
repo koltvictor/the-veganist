@@ -9,15 +9,10 @@ class Api::RecipesController < ApplicationController
         render json: @recipe, status: 200
     end
 
-    # def create 
-    #     Recipe = Recipe.new(Recipe_params)
-    #     if Recipe.save
-    #         render json: Recipe, status: 201
-    #     else
-    #         render json: { errors: Recipe.errors }, status: 422
-    #     end
-
-    # end
+    def create 
+        recipe = Recipe.create(recipe_params)
+        render json: recipe, status: 200
+    end
 
     # def update
     #     Recipe = Recipe.find(params[:id])
@@ -38,10 +33,10 @@ class Api::RecipesController < ApplicationController
     #     end
     # end
 
-    # private
+    private
 
-    # def recipe_params
-    #     params.permit(:id, :name, :image, :ingredients, :recipe, :cuisine, :course)
-    # end
+    def recipe_params
+        params.permit(:name, :image, :ingredients, :recipe, :cuisine, :course)
+    end
 
 end
