@@ -38,7 +38,7 @@
 }
 
 .recipeCards{
-  display: flex;
+  display: block;
 }
 
 .recipeCard {
@@ -48,4 +48,29 @@
 .recipeImage {
   height: 25%;
   width: 25%;
+}
+
+.headerWrapper {
+  text-align: center;
+  padding: 0;
+  display: flex;
+  /* background-color: rgb(24, 207, 192); */
+}
+
+.headerText {
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+.nav {
+  text-align: center;
+  font-size: 1vh;
+  font-family: sans-serif;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  text-decoration: none;
+  padding-top: 1rem;
 }

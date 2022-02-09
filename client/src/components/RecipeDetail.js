@@ -19,7 +19,7 @@ export default function RecipeDetail () {
         <div>
             <h1>Recipe Detail</h1>
             <a href="/recipes">Back to recipes</a><br/><br/>
-            <img src={recipeShowing.image} alt={recipeShowing.name} />
+            <img className="recipeImage" src={recipeShowing.image} alt={recipeShowing.name} />
             <h3>{recipeShowing.name}</h3>
             <p>Ingredients:<br/>{recipeShowing.ingredients}</p>
             <p>Directions:<br/>{recipeShowing.recipe}</p>

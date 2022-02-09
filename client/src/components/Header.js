@@ -2,14 +2,14 @@
 export default function Header () {
     return(
         <div>
-            <h1>
-                Vegan Recipes
-            </h1>
-            <a href="/">Home Page</a>            
-            <a href="/recipes">Recipes Page</a>
-            <a href="/courses">Course Page</a>
-            <a href="/about">About Page</a>
-            <a href="/form">Form Component</a>
+            <div className="headerWrapper">
+                <h2 className="headerText">Vegan Recipes</h2>
+                <a className="nav" href="/">Home</a>            
+                <a className="nav" href="/recipes">Recipes Index</a>
+                <a className="nav" href="/courses">Sort by Course</a>
+                <a className="nav" href="/about">About</a>
+                <a className="nav" href="/form">Add a New Recipe</a>
+            </div>
         </div>
     )
 }
