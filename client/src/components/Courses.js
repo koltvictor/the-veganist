@@ -1,4 +1,11 @@
-export default function Courses () {
+export default function Courses ({recipes}) {
+
+    const lunch = recipes.filter((recipe) => {
+        return recipe.course === "Lunch"
+    })
+
+    console.log(lunch)
+
     return(
         <div>
             <h1> COURSES </h1>

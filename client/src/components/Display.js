@@ -1,7 +1,7 @@
 export default function Display({recipes}) {
 
     const last = recipes[recipes.length - 1];
-    console.log(last)
+    console.log(recipes)
 
     return(
         <div>

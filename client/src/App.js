@@ -1,5 +1,6 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
+import axios from "axios";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "./components/Home";
@@ -14,11 +15,14 @@ function App() {
   const [recipes, setRecipesList] = useState([])
   const [search, setSearch] = useState('')
 
-  async: useEffect(() => {
-    fetch('/api/recipes')
-    .then(res => res.json())
-    .then((data) => setRecipesList(data))
+  useEffect(() => {
+    const fetchData = async () => {await axios.get('/api/recipes')
+    .then(res=>setRecipesList(res.data))
+  }
+    fetchData()
   }, [])
+
+  console.log(recipes)
 
   function handleSearch(e) {
     setSearch(e.target.value)
@@ -34,9 +38,11 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
+            <Suspense fallback={<div>Loading...</div>}>
             <Home 
               recipes={recipes}
             />
+            </Suspense>
           </Route>
           <Route exact path="/recipes">
             <br/>
@@ -52,7 +58,9 @@ function App() {
             <RecipeDetail />
           </Route>
           <Route exact path="/courses">
-            <Courses />
+            <Courses 
+              recipes={recipes}
+            />
           </Route>
           <Route exact path="/form">
             <Form
