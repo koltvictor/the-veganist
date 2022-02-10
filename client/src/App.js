@@ -46,6 +46,7 @@ function App() {
           </Route>
           <Route exact path="/recipes">
             <br/>
+            <Suspense fallback={<div>Loading...</div>}>
             <Search 
               search={search}
               handleSearch={handleSearch}
@@ -53,6 +54,7 @@ function App() {
             <Recipes 
               recipes={displayedRecipes}
             />
+            </Suspense>
           </Route>
           <Route exact path="/recipes/:id">
             <RecipeDetail />

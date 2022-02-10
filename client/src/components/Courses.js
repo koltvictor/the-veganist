@@ -1,7 +1,7 @@
 export default function Courses ({recipes}) {
 
     const lunch = recipes.filter((recipe) => {
-        return recipe.course === "Lunch"
+        return recipe.course === "Lunch" || recipe.course === "Dinner"
     })
 
     console.log(lunch)

@@ -10,7 +10,8 @@ export default function Form ({recipes, setRecipesList}) {
     const [course, setCourse] = useState('');
 
     function handleSubmit(e) {
-        e.preventDefault();
+        // e.preventDefault();
+        // e.target.reset();
         fetch('/api/recipes', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -25,6 +26,7 @@ export default function Form ({recipes, setRecipesList}) {
         })
         .then(res => res.json())
         .then((newRecipe) => handleAddRecipe(newRecipe))
+        
     };
 
     function handleAddRecipe(newRecipe) {
