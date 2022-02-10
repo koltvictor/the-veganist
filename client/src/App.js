@@ -14,7 +14,7 @@ function App() {
   const [recipes, setRecipesList] = useState([])
   const [search, setSearch] = useState('')
 
-  useEffect(() => {
+  async: useEffect(() => {
     fetch('/api/recipes')
     .then(res => res.json())
     .then((data) => setRecipesList(data))

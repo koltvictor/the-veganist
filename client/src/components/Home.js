@@ -2,6 +2,9 @@ import Display from "./Display"
 
 export default function Home ({recipes}) {
 
+        
+    const last = recipes[recipes.length - 1];
+    console.log(last)
     
     return(
         <div>
