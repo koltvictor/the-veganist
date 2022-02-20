@@ -37,6 +37,7 @@ export default function Form ({recipes, setRecipesList}) {
     return (
         <div>
             <h1>Form</h1><br/>
+            <p>Want to add your own recipe to our index?  By all means!  <br/>Just be sure to fill out all the required fields below, <i>et voila</i>!  You're a recipe artist.  </p>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
