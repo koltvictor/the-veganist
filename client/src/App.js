@@ -1,5 +1,5 @@
 import './App.css';
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -13,6 +13,8 @@ import Search from "./components/Search";
 
 function App() {
   const [recipes, setRecipesList] = useState([])
+
+  
   const [search, setSearch] = useState('')
 
   useEffect(() => {
@@ -33,20 +35,19 @@ function App() {
   })
 
   return (
+    
     <BrowserRouter>
       <div className="App">
+      
         <Header />
         <Switch>
           <Route exact path="/">
-            <Suspense fallback={<div>Loading...</div>}>
             <Home 
               recipes={recipes}
             />
-            </Suspense>
           </Route>
           <Route exact path="/recipes">
             <br/>
-            <Suspense fallback={<div>Loading...</div>}>
             <Search 
               search={search}
               handleSearch={handleSearch}
@@ -54,8 +55,8 @@ function App() {
             <Recipes 
               recipes={displayedRecipes}
             />
-            </Suspense>
           </Route>
+          
           <Route exact path="/recipes/:id">
             <RecipeDetail />
           </Route>
@@ -71,8 +72,10 @@ function App() {
             />
           </Route>
         </Switch>
+        
       </div>
     </BrowserRouter>
+    
   );
 }
 

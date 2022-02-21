@@ -2,8 +2,8 @@ import { Suspense } from "react";
 
 export default function Display({recipes}) {
 
-    const last = recipes[recipes.length - 1];
-    console.log(recipes)
+    // const last = recipes[recipes.length - 1];
+    // console.log(recipes)
 
     return(
         <div>
