@@ -30,15 +30,14 @@ function App() {
     setSearch(e.target.value)
   }
 
-  let displayedRecipes = recipes.filter(recipe => {
-    return recipe.recipe.toLowerCase().includes(search.toLowerCase())
-  })
+  // let displayedRecipes = recipes.filter(recipe => {
+  //   return recipe.recipe.toLowerCase().includes(search.toLowerCase())
+  // })
 
   return (
     
     <BrowserRouter>
       <div className="App">
-      
         <Header />
         <Switch>
           <Route exact path="/">
@@ -53,7 +52,7 @@ function App() {
               handleSearch={handleSearch}
             />
             <Recipes 
-              recipes={displayedRecipes}
+              recipes={recipes}
             />
           </Route>
           
