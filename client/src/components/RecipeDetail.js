@@ -24,7 +24,7 @@ export default function RecipeDetail () {
             <p>Ingredients:<br/>{recipeShowing.ingredients}</p>
             <p>Directions:<br/>{recipeShowing.recipe}</p>
             <p>Cuisine: {recipeShowing.cuisine}</p>
-            <p>Course(s): {recipeShowing.course}</p>
+            {/* <p>Course(s): {recipeShowing.course}</p> */}
             <a href="/recipes">Back to recipes</a><br/>
         </div>
     )
