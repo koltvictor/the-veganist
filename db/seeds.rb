@@ -40,4 +40,34 @@ Recipe.create!(
     image: "https://cdn.loveandlemons.com/wp-content/uploads/2020/02/spaghetti-and-meatballs-580x715.jpg"
 )
 
+Recipe.create!(
+    name: "Crunchwrap Supreme",
+    image: "https://www.wearesovegan.com/wp-content/uploads/2020/07/XSV_CruchWrap_Header1-1-1170x1645.jpg"
+)
+
+Recipe.create!(
+    name: "Mushroom Stroganoff",
+    image: "https://rainbowplantlife.com/wp-content/uploads/2019/02/stroganoff11of1-819x1024-1-500x500.jpg"
+)
+
+Recipe.create!(
+    name: "General Tsao's Tofu",
+    image: "https://simpleveganblog.com/wp-content/uploads/2018/12/General-tsos-tofu-5.jpg"
+)
+
+Recipe.create!(
+    name: "Simple Marinated Tofu",
+    image: "https://simpleveganblog.com/wp-content/uploads/2021/04/marinated-tofu-1.jpg"
+)
+
+Recipe.create!(
+    name: "No Tuna Salad",
+    image: "https://www.forksoverknives.com/wp-content/uploads/no-tuna-salad-sandwich-no-badge.jpg"
+)
+
+Recipe.create!(
+    name: "Spicy Cous Cous Salad",
+    image: "https://www.errenskitchen.com/wp-content/uploads/2016/09/peppadew-Moroccan-Spiced-Couscous4-e1510601910213.jpg"
+)
+
 puts "Donezo!"
