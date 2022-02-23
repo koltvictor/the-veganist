@@ -35,4 +35,9 @@ Recipe.create!(
     ingredients: ""
 )
 
+Recipe.create!(
+    name: "Spaghetti and Meatballs",
+    image: "https://cdn.loveandlemons.com/wp-content/uploads/2020/02/spaghetti-and-meatballs-580x715.jpg"
+)
+
 puts "Donezo!"
