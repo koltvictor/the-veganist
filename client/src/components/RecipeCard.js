@@ -8,7 +8,7 @@ export default function RecipeCard({recipe}){
         <div className="recipeCard">
             <img className="recipeImage" src={image} alt={name} />
             <h3>{name}</h3>
-            <Link to={`/recipes/${id}`}>See The Recipe</Link>
+            <Link to={`/recipes/${id}`}>See the Recipe</Link>
         </div>
     )
 }
