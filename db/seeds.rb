@@ -70,4 +70,14 @@ Recipe.create!(
     image: "https://www.errenskitchen.com/wp-content/uploads/2016/09/peppadew-Moroccan-Spiced-Couscous4-e1510601910213.jpg"
 )
 
+Recipe.create!(
+    name: "Cajun Dirty Rice Stuffed Bell Peppers",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-classic-stuffed-peppers-vertical-1538066317.jpg?crop=1xw:1xh;center,top&resize=768:*"
+)
+
+Recipe.create!(
+    name: "Vinaigrette Salad Dressing",
+    image: "https://lovingitvegan.com/wp-content/uploads/2019/08/Vinaigrette-6.jpg"
+)
+
 puts "Donezo!"
